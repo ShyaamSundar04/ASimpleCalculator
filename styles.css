@@ -1,0 +1,90 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url('bg.jpg') no-repeat center center fixed; /* Add the background image */
+  background-size: cover; /* Make sure the image covers the entire background */
+  font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.8); /* Make the calculator background slightly transparent */
+  padding: 20px;
+  width: 300px;
+  position: relative; /* Needed for the equal sign positioning */
+}
+
+.display {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  font-size: 2em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 50px; /* Ensure space for the equal sign */
+}
+
+button {
+  background: #f0f0f0;
+  border: none;
+  padding: 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+.equal-sign {
+  background: #4caf50;
+  color: white;
+  grid-column: span 4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.delete {
+  background: #ff5722;
+  color: white;
+  grid-column: span 2;
+}
+
+.delete:hover {
+  background: #e64a19;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1em;
+  color: #333;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Background to ensure readability */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.footer p {
+  margin: 0;
+}
